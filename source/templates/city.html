@@ -1,10 +1,11 @@
 <div class="col-xs-3 city">
-	<div class="title">Berlin</div>
-	<div class="image">
-		<img src="" alt="" class="img-responsive">
+	<div class="title">{{name}}</div>
+	<div ng-if="loading">fetching data...</div>
+	<div class="image" ng-if="!loading">
+		<img ng-src="http://openweathermap.org/img/w/{{conditionIco}}.png">
 	</div>
-	<div class="info">
-		<p class="text-left">10 C</p>
-		<p class="text-right">Rain</p>
+	<div class="info" ng-if="!loading">
+		<p class="text-left">{{temp}} C</p>
+		<p class="text-right">{{condition}}</p>
 	</div>
 </div>
