@@ -39,7 +39,7 @@ angular.module('module').directive('city', ['$timeout', '$http', 'CityList', fun
 				scope.alive = false;
 			})
 
-			scope.setUpdateTimer();
+			scope.updateInfo();
 		}
 	}
 }]);
