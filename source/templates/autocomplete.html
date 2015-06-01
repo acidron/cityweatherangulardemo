@@ -1,8 +1,23 @@
 <div class="container addCity">
 	<form class="form">
-	  <div class="form-group">
-	    <label for="exampleInputEmail1">Enter city</label>
-	    <input type="text" class="form-control" placeholder="City name">
+		<div class="form-group">
+	    	<label>Enter city</label>
+	    	<input type="text" class="form-control" placeholder="City name">
+	    </div>
+		<div class="form-group">
+			<label>Refresh interval:
+	    	<select ng-model="time">
+	    		<option value="1">1</option>
+	    		<option value="2">2</option>
+	    		<option value="5">5</option>
+	    		<option value="10">10</option>
+	    	</select>
+	    	 seconds.
+
+	    </div>
+		<div class="form-group">
+	    	<button type="button" class="btn-xs btn-success" ng-click="add()">Add</button>
+	    </div>
 	  </div>
 	</form>
 </div>

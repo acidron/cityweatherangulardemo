@@ -3,14 +3,15 @@ angular.module('module').directive('city', ['$timeout', '$http', 'CityList', fun
 		restrict: 'E',
 		templateUrl: 'city.html',
 		scope: {
-			id: '='
+			id: '=',
+			time: '='
 		},
 		link: function(scope) {
 			scope.loading = true;
 
 
 			scope.setUpdateTimer = function() {
-				$timeout(scope.updateInfo, 2000);	
+				$timeout(scope.updateInfo, scope.time);	
 			}
 
 			scope.remove = function () {
