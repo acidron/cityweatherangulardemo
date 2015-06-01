@@ -8,7 +8,7 @@ angular.module('module').directive('city', ['$timeout', '$http', 'CityList', fun
 		},
 		link: function(scope) {
 			scope.loading = true;
-
+			scope.alive = true;
 
 			scope.setUpdateTimer = function() {
 				$timeout(scope.updateInfo, scope.time);	
@@ -28,9 +28,16 @@ angular.module('module').directive('city', ['$timeout', '$http', 'CityList', fun
 					scope.condition = weather.main;
 					scope.conditionIco = weather.icon;
 					scope.loading = false;
-					scope.setUpdateTimer();
+					if (scope.alive) {
+						scope.setUpdateTimer();	
+					}
 				})
 			}
+
+			scope.$on("$destroy", function() {
+				// todo разобраться, почему был жив без этого, и мертв ли scope теперь
+				scope.alive = false;
+			})
 
 			scope.setUpdateTimer();
 		}
