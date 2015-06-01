@@ -1,5 +1,6 @@
-<div class="col-xs-3 city">
+<div class="city" ng-mouseover="hover = true" ng-mouseleave="hover = false">
 	<div class="title">{{name}}</div>
+	<button ng-show="hover" class="btn-danger btn-xs btn-remove" ng-click="remove()">remove</button>
 	<div ng-if="loading">fetching data...</div>
 	<div class="image" ng-if="!loading">
 		<img ng-src="http://openweathermap.org/img/w/{{conditionIco}}.png">

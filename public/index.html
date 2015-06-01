@@ -7,14 +7,18 @@
 		<script src="app.js"></script>
 		<script src="templates.js"></script>
 		<script src="scripts.js"></script>
+
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
 		
 	</head>
 	<body>
 	<div class="container main" ng-controller="MainLoopCtrl">
 		<div ng-repeat="city in cities">
-			<city name="city.name"></city>
+			<city id="city"></city>
 		</div>
 	</div>
+
+	<autocomplete></autocomplete>
 
 	</body>
 </html>
