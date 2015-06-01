@@ -1,4 +1,4 @@
-angular.module('Weather').directive('city', ['$timeout', '$http', 'CityList', function ($timeout, $http, CityList) {
+angular.module('module').directive('city', ['$timeout', '$http', 'CityList', function ($timeout, $http, CityList) {
 	return {
 		restrict: 'E',
 		templateUrl: 'city.html',

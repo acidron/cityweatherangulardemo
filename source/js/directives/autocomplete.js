@@ -1,4 +1,4 @@
-angular.module('Weather').directive('autocomplete', ['$http', 'CityList', function($http, CityList) {
+angular.module('module').directive('autocomplete', ['$http', 'CityList', function($http, CityList) {
 	return {
 		restrict: 'E',
 		templateUrl: 'autocomplete.html',
